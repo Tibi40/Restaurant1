@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Slf4j
 @Service
-public class CustomerServiceimcl implements CustommerService{
+public class CustomerServiceimcl extends CustommerService {
 
-    private final ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
     private CustommerRepository custommerRepository;
 
     @Autowired
-    public CustommerServiceImpl(ObjectMapper objectMapper,
-                                CustommerService custommerService) {
+    public void CustommerServiceImpl(ObjectMapper objectMapper,
+                                     CustommerService custommerService) {
         this.objectMapper = objectMapper;
         this.custommerRepository = custommerRepository;
 
@@ -31,6 +31,10 @@ public class CustomerServiceimcl implements CustommerService{
         LogManager customerRepository;
         Customer savedCustomer = customerRepository.save(customer);
         log.info("Customer" + savedCustomer.getFirstName() + "was created.");
-        return ObjectMapper.convertValue(savedCustomer, CustomerDTO.class);
+        CustomerDTO customerDTO1 = ObjectMapper.convertValue(savedCustomer, CustomerDTO.class);
+        CustomerDTO customerDTO11 = customerDTO1;
+        CustomerDTO customerDTO111 = customerDTO11;
+        CustomerDTO customerDTO1111 = customerDTO111;
+        return customerDTO1111;
     }
 }

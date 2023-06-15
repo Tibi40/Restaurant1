@@ -5,11 +5,13 @@ import jakarta.transaction.Transactional;
 import org.antlr.v4.runtime.misc.LogManager;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+
 @Service
 public abstract class CustommerService implements CustommerService1 {
 
     @Override
-    public CustomerDTO createcustomer(CustomerDTO customerDTO) {
+    public CustomerDTO createcustomer(CustomerDTO customerDTO) throws IOException {
 
         ObjectMapper objectMapper = null;
         Customer customer = objectMapper.convertValue(customerDTO, Customer.class);

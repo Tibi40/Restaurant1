@@ -1,9 +1,7 @@
 package com.restaurant.reservation.system.controllers;
 
 
-import com.restaurant.reservation.system.moodles.entities.Customer;
 import com.restaurant.reservation.system.services.CustomerDTO;
-import com.restaurant.reservation.system.services.CustomerServiceimcl;
 import com.restaurant.reservation.system.services.CustommerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

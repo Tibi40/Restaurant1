@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CustommerRepository implements JpaRepository<Customer, Long> {
+public interface CustommerRepository extends JpaRepository<Customer, Long> {
 
 }
